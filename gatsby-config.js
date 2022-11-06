@@ -107,4 +107,23 @@ module.exports = {
     PARALLEL_SOURCING: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/parallel-sourcing-feedback)) · Run all source plugins at the same time instead of serially. For sites with multiple source plugins, this can speedup sourcing and transforming considerably.
     FUNCTIONS: false // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/functions-feedback)) · Compile Serverless functions in your Gatsby project and write them to disk, ready to deploy to Gatsby Cloud
   }
+  module.exports = {
+    plugins: [
+        {
+            resolve: "gatsby-source-google-docs",
+            options: {
+                // https://drive.google.com/drive/folders/FOLDER_ID
+                folder: "1hAeI3uWtpjtgO-5OVlPs2gTU8v7YDWI9",
+                createPages: true,
+            },
+        },
+        "gatsby-transformer-remark",
+        //
+        // OR "gatsby-plugin-mdx" for advanced usage using MDX
+        //
+        // You need some transformations?
+        // Checkout https://www.gatsbyjs.com/plugins/?=gatsby-remark
+        // And pick-up some plugins
+    ],
+}
 };
